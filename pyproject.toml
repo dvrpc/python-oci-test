@@ -1,0 +1,15 @@
+[project]
+name = "uv"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.118.0",
+    "oracledb>=3.3.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.13.2",
+]
