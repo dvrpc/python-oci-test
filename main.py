@@ -33,7 +33,7 @@ async def lifespan(app: FastAPI):
         await pool.close(force=True)
 
 
-app = FastAPI(lifespan=lifespan)
+app = FastAPI(lifespan=lifespan, root_path=os.getenv("ROOT_PATH", ""))
 
 
 class Project(BaseModel):
