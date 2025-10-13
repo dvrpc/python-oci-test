@@ -20,9 +20,9 @@ async def lifespan(app: FastAPI):
     global pool
     try:
         pool = oracledb.create_pool_async(
-            user=os.getenv("USER"),
-            password=os.getenv("PASSWORD"),
-            dsn=os.getenv("DSN"),
+            user=os.getenv("ORACLE_USER"),
+            password=os.getenv("ORACLE_PASSWORD"),
+            dsn=os.getenv("ORACLE_DSN"),
         )
     except Exception as e:
         raise Exception(f"Failed to create database connection pool: {e}")
